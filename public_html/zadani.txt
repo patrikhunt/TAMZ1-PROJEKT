@@ -1,0 +1,5 @@
+Vědecká kalkulačka
+
+- Rozdělení na tři bloky radio buttony 
+
+--  1) Blok klasická

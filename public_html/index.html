@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TAMZ1 Projekt</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <link rel="shortcut icon" href="">
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://cdn.jtsage.com/datebox/latest/jqm-datebox.min.css">
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        
+        
+        <script type="text/javascript" src="http://cdn.jtsage.com/datebox/latest/jqm-datebox.core.min.js"></script>
+        <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.datebox.min.js"></script>
+        
+        
+        <!-- Moje skripty -->
+        <script src="js/classic.js"></script>
+        
+        
+        <!-- Moje css -->
+        <link rel="stylesheet" type="text/css" href="css/classic.css">
+       
+    </head>
+    
+    <body>
+    <div data-role="page" id="page1">
+
+        <div data-role="header">
+          <h1>TAMZ1 PROJEKT</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">   
+            
+            <!-- Taby pro přepinání mezi typem kalkulačky -->
+            <div data-role="tabs" id="tabs">
+            
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#one" data-ajax="false">Klasická</a></li>
+                        <li><a href="#two" data-ajax="false">Vědecká</a></li>
+                        <li><a href="ajax-content.html" data-ajax="false">Programátorská</a></li>
+                    </ul>
+                </div>
+                
+
+                <div id="one" class="ui">
+                    <h1 class ="zarovnani_stred">Klasická kalkulačka</h1>
+                    
+                        <!-- Start obsahu klasické kalkulacky -->
+                        <input type = "text" id ="vysledek" /> <!-- Zde se zapisuje vysledek kalkulace -->
+                        </br> <!-- Vložení řádku -->
+                        
+                        <div class="ui-grid-d"> <!-- Aplikování gridu -->
+                            
+                            <div class="ui-block-a"> <!-- První blok -->
+                                <a href="#" id = "jedna_tlacitko" class="zvuk_stisk_tlacitka
+                                ui-btn ui-corner-all ui-shadow">1</a><br>
+                                <a href="#" id="sest_tlacitko" class="zvuk_stisk_tlacitka
+                                ui-btn ui-corner-all ui-shadow">6</a><br>
+                                <a href="#" id ="minus" data-toggle="tooltip" title="Odečítání"
+                                class="zvuk_stisk_tlacitka  ui-btn ui-corner-all ui-shadow">-</a><br>
+                            </div> <!-- Konec prvního bloku -->
+                            
+                            <div class="ui-block-b"> <!-- Druhy blok -->
+                                <a href="#" id = "dva_tlacitko" class="zvuk_stisk_tlacitka  ui-btn
+                                ui-corner-all ui-shadow">2</a><br>
+                                <a href="#" id ="sedm_tlacitko" class="zvuk_stisk_tlacitka 
+                                ui-btn ui-corner-all ui-shadow">7</a><br>
+                                <a href="#" id ="nasobeni" data-toggle="tooltip" title="Násobení"
+                                class="zvuk_stisk_tlacitka  ui-btn ui-corner-all ui-shadow">*</a><br>
+                            </div> <!-- Konec druhého bloku -->
+                            
+                            <div class="ui-block-c"> <!-- Třetí blok -->
+                                <a href="#"  id ="tri_tlacitko" class="zvuk_stisk_tlacitka 
+                                ui-btn ui-corner-all ui-shadow">3</a><br>
+                                <a href="#" id = "osm_tlacitko" class="zvuk_stisk_tlacitka 
+                                ui-btn ui-corner-all ui-shadow">8</a><br>
+                                <a href="#" id = "deleni_tlacitko" data-toggle="tooltip" title="Dělení"
+                                class="zvuk_stisk_tlacitka ui-btn ui-corner-all ui-shadow">/</a><br>
+                            </div> <!-- Konec třetího bloku -->
+                            
+                            
+                            <div class="ui-block-d"> <!-- Čtvrtý blok -->
+                                <a href="#" id ="ctyri_tlacitko" class="zvuk_stisk_tlacitka 
+                                ui-btn ui-corner-all ui-shadow">4</a><br>
+                                <a href="#" id ="devet_tlacitko" class="zvuk_stisk_tlacitka
+                                ui-btn ui-corner-all ui-shadow">9</a><br>
+                            </div> <!-- Konec čtvrtého bloku -->
+                            
+                            <div class="ui-block-e"> <!-- Pátý blok -->
+                                <a href="#" id ="pet_tlacitko" class="zvuk_stisk_tlacitka 
+                                ui-btn ui-corner-all ui-shadow">5</a><br>
+                                <a href="#" id ="plus" data-toggle="tooltip" title="Přičitání"
+                                class="zvuk_stisk_tlacitka ui-btn ui-corner-all ui-shadow">+</a><br>
+                            </div>  <!-- Konec pátého bloku -->
+                        </div> <!-- Konec gridu -->
+                    
+                        
+                   
+ 
+    
+                        <script src="js/zvuky.js"></script>
+ 
+
+                    
+                        <a href="#" id ="vypocitat" data-toggle="tooltip" title="Provedení vypočtu"
+                        class="zvuk_stisk_tlacitka ui-btn ui-corner-all ui-shadow fa fa-calculator fa-lg">&nbsp;Spočítat</a>
+                        
+                        <a href="#" id ="reset_tlacitko" data-toggle="tooltip" title="Vyresetování výsledku"
+                        class="zvuk_stisk_tlacitka ui-btn ui-corner-all ui-shadow fa fa-times fa-lg">&nbsp; Reset</a>
+                    
+                    <!-- Konec obsahu klasické kalkulacky -->
+
+                </div>
+                
+                <!--<a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a> -->
+
+                
+
+                
+                
+                
+                
+                <div id="two">
+                    <ul data-role="listview" data-inset="true">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+        <div data-role="footer">  
+            <ul data-role="listview" data-inset="true" data-split-icon="minus" data-split-theme="d" id="todoList"></ul>
+        </div>
+    </div>
+          
+    
+        
+        
+        
+        
+        
+        
+        
+        
+      <div data-role="page" data-dialog="true" id="programatorska_kalkulacka" data-title="TODO">
+        
+        <div data-role="header">
+            <h1>Programátorská kalkulačka</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div id="addDialogText"></div>
+        </div>
+          
+
+        <div data-role="footer">            
+            <a href="#page1" data-transition="flip" class="ui-btn" id="backBtn">Back</a>
+            
+            
+        </div>   
+          
+       
+          
+          
+    </div>        
+        
+        
+        
+        
+        
+        
+        
+    
+</body>
+</html>
+
+
+
